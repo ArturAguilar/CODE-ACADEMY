@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Code Academy</title>
+    <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilização geral */
+.main-content {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.hero h1 span {
+    color: #00ff00;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #00ff00;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+}
+
+.btn:hover {
+    background: #00cc00;
+    transform: translateY(-2px);
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    max-width: 300px;
+    padding: 25px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    transition: 0.3s;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    background: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Sections conectadas */
+.content-section {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 40px;
+    border-radius: 12px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    color: #222;
+}
+
+.content-section i {
+    color: #00ff00;
+    margin-right: 8px;
+}
+
+.content-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #000, #1a1a1a);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navegation">
+            <a href="index.html" class="logo"><span>${</span>Code<span>}</span> Academy</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" onclick="fecharMenu()">Home</a></li>
+                <li class="nav-item"><a href="roadmap.html" onclick="fecharMenu()">Roadmap</a></li>
+                <li class="nav-item"><a href="sobre.html" onclick="fecharMenu()">Sobre</a></li>
+                <li class="nav-item"><a href="contato.html" onclick="fecharMenu()">Contato</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="particles-js"></div>
+
+    <main class="main-content">
+        <section class="hero">
+            <h1>Aprenda a Programar <span>de Forma Simples e Direta</span></h1>
+            <p>Descubra conteúdos incríveis, roadmaps bem estruturados e um caminho claro para sua evolução na programação.</p>
+            <a href="roadmap.html" class="btn"><i class='bx bx-rocket'></i> Comece Agora</a>
+        </section>
+    
+        <section id="conteudos" class="features">
+            <div class="feature">
+                <i class='bx bx-book-open'></i>
+                <h2>Conteúdos</h2>
+                <p>Artigos, tutoriais e projetos para você evoluir no seu ritmo.</p>
+            </div>
+            <div class="feature">
+                <i class='bx bx-map'></i>
+                <h2>Roadmap</h2>
+                <p>Um guia estruturado para você não se perder no aprendizado.</p>
+            </div>
+            <div class="feature">
+                <i class='bx bx-code-block'></i>
+                <h2>Desafios Práticos</h2>
+                <p>Coloque seus conhecimentos em prática com desafios reais e melhore suas habilidades.</p>
+            </div>
+        </section>
+    </main>            
+    
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#00ff00" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                }
+            }
+        });
+                ////////////////////////////////////////////////////
+        const menu = document.querySelector('.menu');
+        const NavMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            NavMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            document.querySelector(".nav-menu").classList.remove("ativo");
+            document.querySelector(".menu").classList.remove("ativo");
+
+            menu.addEventListener('click' , () => {
+                menu.classList.toggle('desativar');
+                NavMenu.classList.toggle('desativar');
+                });
+}
+    </script>
+</body>
+</html>

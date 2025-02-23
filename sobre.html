@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Code Academy</title>
+    <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+   /* Seção Sobre */
+#sobre {
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 50px 5%;
+    padding-top: 50px;
+    /*colocar um filtro*/
+    background: linear-gradient(120deg, #000, #1a1a1a);
+    
+}
+
+/* Container Centralizado */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+/* Título */
+h2 {
+    font-size: 40px;
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+
+/* Parágrafos maiores */
+p {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Botão */
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    background: #00ff00;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #00cc00;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #000, #1a1a1a);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navegation">
+            <a href="index.html" class="logo"><span>${</span>Code<span>}</span> Academy</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" onclick="fecharMenu()">Home</a></li>
+                <li class="nav-item"><a href="roadmap.html" onclick="fecharMenu()">Roadmap</a></li>
+                <li class="nav-item"><a href="sobre.html" onclick="fecharMenu()">Sobre</a></li>
+                <li class="nav-item"><a href="contato.html" onclick="fecharMenu()">Contato</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="particles-js"></div>
+
+    <section id="sobre">
+        <div class="container">
+            <h2><i class='bx bx-info-circle'></i> Quem Somos</h2>
+            <p>
+                Somos apaixonados por tecnologia e inovação. Nosso compromisso é criar experiências digitais 
+                que transformam o aprendizado e o desenvolvimento de projetos.
+            </p>
+            <p>
+                Acreditamos que o conhecimento deve ser acessível a todos e buscamos sempre soluções inteligentes 
+                para tornar a tecnologia mais intuitiva e eficiente.
+            </p>
+            <p>
+                Com uma abordagem prática e focada, exploramos novas ideias para criar ferramentas que fazem a diferença.
+            </p>
+            <a href="contato.html" class="btn">Entre em Contato</a>
+        </div>
+    </section>        
+    
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#00ff00" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                }
+            }
+        });
+                ////////////////////////////////////////////////////
+        const menu = document.querySelector('.menu');
+        const NavMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            NavMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            document.querySelector(".nav-menu").classList.remove("ativo");
+            document.querySelector(".menu").classList.remove("ativo");
+
+            menu.addEventListener('click' , () => {
+                menu.classList.toggle('desativar');
+                NavMenu.classList.toggle('desativar');
+                });
+}
+    </script>
+</body>
+</html>

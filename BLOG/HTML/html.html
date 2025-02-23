@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Code Academy</title>
+    <link rel="shortcut icon" href="../../IMG/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        /* Seção HTML */
+#html-page {
+    width: 100%;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #2c2c2c, #111);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Título */
+h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #ff5e00;
+}
+
+h2 i {
+    font-size: 44px;
+}
+
+/* Parágrafo */
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.container p{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+details .details-content p{
+    color: #ffffff;
+    font-size: 18px;
+    text-align: start;
+    line-height: 0.8;
+}
+
+/* Estilização dos details */
+.html-content details {
+    background: #1e1e1e;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    padding: 18px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.html-content details[open] {
+    background: #363636;
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+.html-content summary {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.html-content summary i {
+    font-size: 26px;
+    color: #ff5e00;
+    transition: all 0.3s ease-in-out;
+}
+
+.html-content details[open] summary i {
+    color: #ffffff;
+}
+
+.html-content .details-content {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #fff;
+    border-left: 2px solid #ff5e00;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 26px; /* Ajuste para telas médias */
+    }
+
+    details .details-content p, p {
+        font-size: 16px; /* Ajuste para telas médias */
+    }
+
+    .container h2{
+        flex-direction: column;
+    }
+
+    details summary{
+        font-size: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navegation">
+            <a href="../../index.html" class="logo"><span>${</span>Code<span>}</span> Academy</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../../index.html" onclick="fecharMenu()">Home</a></li>
+                <li class="nav-item"><a href="../../roadmap.html" onclick="fecharMenu()">Roadmap</a></li>
+                <li class="nav-item"><a href="../../sobre.html" onclick="fecharMenu()">Sobre</a></li>
+                <li class="nav-item"><a href="../../contato.html" onclick="fecharMenu()">Contato</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="html-page">
+        <div class="container">
+            <h2><i class='bx bxl-html5'></i> HTML - Fundamentos Essenciais</h2>
+            <p>Explore os conceitos fundamentais do HTML e sua importância no desenvolvimento web.</p>
+    
+            <div class="html-content">
+                <details>
+                    <summary><i class='bx bx-code-alt'></i> Fundamentos</summary>
+                    <div class="details-content">
+                        <p><a href="../HTML/INTRODUÇÃO/01 Introdução ao HTML.html">Introdução</a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/02 Atributos HTML.html">Atributos</a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/03 Títulos HTML.html">Títulos</a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/04 Parágrafos HTML.html">Parágrafo</a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/05 HTML Styles.html"></a>HTML Styles</p>
+                        <p><a href="../HTML/INTRODUÇÃO/06 Formatação de Texto.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/07 Elementos de Citação em HTML.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/08 Cores em HTML.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/09 Links em HTML.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/10 Imagens em HTML.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/11 Tabelas em HTML.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/12 Listas em HTML.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/13 Elementos de Bloco e Inline no HTML.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/14 Elemento div no HTML.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/15 Iframe HTML.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/16 Elemento head.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/17 HTML Responsivo.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/18 Elementos de Código no HTML.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/19 Elementos Semânticos no HTML.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/20 Tudo sobre símbolos e emojis.html"></a></p>
+                        <p><a href="../HTML/INTRODUÇÃO/21 XHTML vs HTML.html"></a></p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-file'></i> Forms</summary>
+                    <div class="details-content">
+                        <p>HTML é uma linguagem baseada em tags que estruturam o conteúdo de uma página.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-video'></i> Mídia</summary>
+                    <div class="details-content">
+                        <p>O uso de tags semânticas melhora a acessibilidade e otimização para motores de busca.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-line-chart'></i> Grafícos</summary>
+                    <div class="details-content">
+                        <p>O HTML segue uma hierarquia lógica, começando com <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> e <code>&lt;body&gt;</code>.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-plug'></i> API</summary>
+                    <div class="details-content">
+                        <p>Listas ordenadas (<code>&lt;ol&gt;</code>) e não ordenadas (<code>&lt;ul&gt;</code>) organizam informações de forma clara.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+        <script>
+        const menu = document.querySelector('.menu');
+        const NavMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            NavMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            document.querySelector(".nav-menu").classList.remove("ativo");
+            document.querySelector(".menu").classList.remove("ativo");
+
+            menu.addEventListener('click' , () => {
+                menu.classList.toggle('desativar');
+                NavMenu.classList.toggle('desativar');
+                });
+}
+    </script>
+</body>
+</html>

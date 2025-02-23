@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Code Academy</title>
+    <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+#contato {
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-align: center;
+    
+    /* Centralização absoluta */
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#contato h2 {
+    font-size: 28px;
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+#contato p {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+}
+
+.input-group:hover {
+    transform: scale(1.03);
+}
+
+.input-group i {
+    font-size: 20px;
+    color: #00ff00;
+    margin-right: 10px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-group textarea {
+    resize: none;
+    height: 80px;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background: #00ff00;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    background: #00cc00;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #000, #1a1a1a);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navegation">
+            <a href="index.html" class="logo"><span>${</span>Code<span>}</span> Academy</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" onclick="fecharMenu()">Home</a></li>
+                <li class="nav-item"><a href="roadmap.html" onclick="fecharMenu()">Roadmap</a></li>
+                <li class="nav-item"><a href="sobre.html" onclick="fecharMenu()">Sobre</a></li>
+                <li class="nav-item"><a href="contato.html" onclick="fecharMenu()">Contato</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div id="particles-js"></div>
+
+    <section id="contato">
+        <h2><i class='bx bx-envelope'></i> Entre em Contato</h2>
+        <p>Tem alguma dúvida ou sugestão? Fale comigo pelo WhatsApp!</p>
+    
+        <form id="contact-form">
+            <div class="input-group">
+                <i class='bx bx-user'></i>
+                <input type="text" id="nome" placeholder="Seu Nome" required>
+            </div>
+    
+            <div class="input-group">
+                <i class='bx bx-envelope'></i>
+                <input type="email" id="email" placeholder="Seu E-mail" required>
+            </div>
+    
+            <div class="input-group">
+                <i class='bx bx-message-square-dots'></i>
+                <textarea id="mensagem" placeholder="Sua Mensagem" required></textarea>
+            </div>
+    
+            <button type="submit" class="btn">Enviar pelo WhatsApp</button>
+        </form>
+    </section>
+    
+               
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#00ff00" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                }
+            }
+        });
+        ////////////////////////////////////////////////////
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Obtém os valores dos campos do formulário
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+            let mensagem = document.getElementById("mensagem").value;
+
+            // Número de WhatsApp para onde a mensagem será enviada (substitua pelo seu número)
+            let telefone = "5521976838012"; // Exemplo: 5581999999999 (código do país + DDD + número)
+
+            // Formata a mensagem para o WhatsApp
+            let texto = `Olá! Meu nome é ${nome}.\nMeu e-mail: ${email}\n\n${mensagem}`;
+
+            // Codifica a mensagem para a URL
+            let url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
+
+            // Redireciona para o WhatsApp
+            window.open(url, "_blank");
+        });
+        ////////////////////////////////////////////////////
+        const menu = document.querySelector('.menu');
+        const NavMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            NavMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            document.querySelector(".nav-menu").classList.remove("ativo");
+            document.querySelector(".menu").classList.remove("ativo");
+
+            menu.addEventListener('click' , () => {
+                menu.classList.toggle('desativar');
+                NavMenu.classList.toggle('desativar');
+                });
+}
+    </script>
+</body>
+</html>

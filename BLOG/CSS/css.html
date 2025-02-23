@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Code Academy</title>
+    <link rel="shortcut icon" href="../../IMG/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+      /* Seção CSS */
+      #css-page {
+    width: 100%;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #2c2c2c, #111);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Título */
+h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #4da6ff;
+}
+
+h2 i {
+    font-size: 44px;
+}
+
+/* Parágrafo */
+p {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.details-content p{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* Estilização dos details */
+.css-content details {
+    background: #1e1e1e;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    padding: 18px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.css-content details[open] {
+    background: #363636;
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+.css-content summary {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.css-content summary i {
+    font-size: 26px;
+    color: #4da6ff;
+    transition: all 0.3s ease-in-out;
+}
+
+.css-content details[open] summary i {
+    color: #ffffff;
+}
+
+.css-content .details-content {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #fff;
+    border-left: 2px solid #4da6ff;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navegation">
+            <a href="../../index.html" class="logo"><span>${</span>Code<span>}</span> Academy</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../../index.html" onclick="fecharMenu()">Home</a></li>
+                <li class="nav-item"><a href="../../roadmap.html" onclick="fecharMenu()">Roadmap</a></li>
+                <li class="nav-item"><a href="../../sobre.html" onclick="fecharMenu()">Sobre</a></li>
+                <li class="nav-item"><a href="../../contato.html" onclick="fecharMenu()">Contato</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="particles-js"></div>
+
+    <section id="css-page">
+        <div class="container">
+            <h2><i class='bx bxl-css3'></i> CSS - Estilizando a Web</h2>
+            <p>Aprenda os fundamentos do CSS para criar layouts modernos e responsivos.</p>
+    
+            <div class="css-content">
+                <details>
+                    <summary><i class='bx bx-palette'></i> História do CSS</summary>
+                    <div class="details-content">
+                        <p>CSS foi criado em 1996 para separar o conteúdo da apresentação visual das páginas web.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-brush'></i> Seletores e Propriedades</summary>
+                    <div class="details-content">
+                        <p>Seletores permitem aplicar estilos específicos a elementos HTML.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-layout'></i> Box Model</summary>
+                    <div class="details-content">
+                        <p>O Box Model define a estrutura dos elementos com margens, bordas, preenchimento e conteúdo.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-grid'></i> Flexbox e Grid</summary>
+                    <div class="details-content">
+                        <p>Flexbox e Grid são técnicas poderosas para criar layouts responsivos.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-mobile-alt'></i> Responsividade</summary>
+                    <div class="details-content">
+                        <p>Usamos media queries para adaptar o site a diferentes tamanhos de tela.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-code'></i> Animações e Transições</summary>
+                    <div class="details-content">
+                        <p>Com CSS, podemos criar animações e transições suaves para melhorar a experiência do usuário.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+    
+        <script>
+        const menu = document.querySelector('.menu');
+        const NavMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            NavMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            document.querySelector(".nav-menu").classList.remove("ativo");
+            document.querySelector(".menu").classList.remove("ativo");
+
+            menu.addEventListener('click' , () => {
+                menu.classList.toggle('desativar');
+                NavMenu.classList.toggle('desativar');
+                });
+}
+    </script>
+</body>
+</html>
