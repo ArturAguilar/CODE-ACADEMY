@@ -8,13 +8,12 @@
     <link rel="shortcut icon" href="../../IMG/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../../style.css">
     <style>
-      /* Seção CSS */
-      #css-page {
+       /* Seção HTML */
+       #css-page {
     width: 100%;
     padding: 80px 5%;
     background: linear-gradient(135deg, #2c2c2c, #111);
     color: #fff;
-    text-align: center;
     display: flex;
     justify-content: center;
     padding-top: 100px;
@@ -32,9 +31,10 @@ h2 {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
     gap: 12px;
-    color: #4da6ff;
+    color: #001aff;
 }
 
 h2 i {
@@ -42,15 +42,23 @@ h2 i {
 }
 
 /* Parágrafo */
-p {
-    font-size: 20px;
+
+a{
     color: #ffffff;
-    margin-bottom: 40px;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-.details-content p{
+.container p{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+details .details-content p{
     color: #ffffff;
     font-size: 18px;
+    text-align: start;
+    line-height: 0.8;
 }
 
 /* Estilização dos details */
@@ -82,7 +90,7 @@ p {
 
 .css-content summary i {
     font-size: 26px;
-    color: #4da6ff;
+    color: #001aff;
     transition: all 0.3s ease-in-out;
 }
 
@@ -95,7 +103,25 @@ p {
     margin-top: 10px;
     padding: 10px;
     color: #fff;
-    border-left: 2px solid #4da6ff;
+    border-left: 2px solid #001aff;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 26px; /* Ajuste para telas médias */
+    }
+
+    details .details-content p, p {
+        font-size: 16px; /* Ajuste para telas médias */
+    }
+
+    .container h2{
+        flex-direction: column;
+    }
+
+    details summary{
+        font-size: 20px;
+    }
 }
     </style>
 </head>
@@ -126,30 +152,47 @@ p {
     
             <div class="css-content">
                 <details>
-                    <summary><i class='bx bx-palette'></i> História do CSS</summary>
+                    <summary><i class='bx bx-hash'></i> Fundamentos</summary>
                     <div class="details-content">
-                        <p>CSS foi criado em 1996 para separar o conteúdo da apresentação visual das páginas web.</p>
+                        <p><a href="../CSS/INTRODUÇÃO/01 Introdução ao CSS.html">Introdução</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/02 Cores no CSS.html">Cores</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/03 Fundos no CSS.html">Fundos</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/04 Bordas no CSS.html">Bordas</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/05 Margens no CSS.html">Margens</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/06 Padding no CSS.html">Padding</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/07 Dimensões no CSS.html">Dimensões</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/08 Modelo de Caixa.html">Box model</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/09 Outline.html">Outline</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/10 Texto no CSS.html">Texto</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/11 Ícones em CSS.html">Ícones</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/12 Links com CSS.html">Links</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/13 Listas em HTML e CSS.html">Listas</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/14 Estilizando Tabelas.html">Tabelas</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/15 Propriedade display.html">display</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/16 Propriedade position.html">position</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/17 Propriedade z-index.html">z-index</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/18 Propriedade overflow.html">overflow</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/19 Propriedade float.html">float</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/20 Alinhamento.html">Alinhamento</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/21 Combinadores.html">Combinadores</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/22 Pseudo-Classes.html">Pseudo-Classes</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/23 Pseudo-Elementos.html">Pseudo-Elementos</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/24 Transparência de imagens.html">Transparência de imagens</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/25 Navbar.html">Navbar</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/26 Dropdowns.html">Dropdowns</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/27 Seletor de Atributo.html">Seletor de Atributo</a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/28 Forms.html"></a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/29 Contadores.html"></a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/30 Unidades de Medida.html"></a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/31 Especificidade.html"></a></p>
+                        <p><a href="../CSS/INTRODUÇÃO/32 Funções Matemáticas.html"></a></p>
                     </div>
                 </details>
     
                 <details>
-                    <summary><i class='bx bx-brush'></i> Seletores e Propriedades</summary>
+                    <summary><i class='bx bx-brush'></i> Avançado</summary>
                     <div class="details-content">
                         <p>Seletores permitem aplicar estilos específicos a elementos HTML.</p>
-                    </div>
-                </details>
-    
-                <details>
-                    <summary><i class='bx bx-layout'></i> Box Model</summary>
-                    <div class="details-content">
-                        <p>O Box Model define a estrutura dos elementos com margens, bordas, preenchimento e conteúdo.</p>
-                    </div>
-                </details>
-    
-                <details>
-                    <summary><i class='bx bx-grid'></i> Flexbox e Grid</summary>
-                    <div class="details-content">
-                        <p>Flexbox e Grid são técnicas poderosas para criar layouts responsivos.</p>
                     </div>
                 </details>
     
@@ -157,13 +200,6 @@ p {
                     <summary><i class='bx bx-mobile-alt'></i> Responsividade</summary>
                     <div class="details-content">
                         <p>Usamos media queries para adaptar o site a diferentes tamanhos de tela.</p>
-                    </div>
-                </details>
-    
-                <details>
-                    <summary><i class='bx bx-code'></i> Animações e Transições</summary>
-                    <div class="details-content">
-                        <p>Com CSS, podemos criar animações e transições suaves para melhorar a experiência do usuário.</p>
                     </div>
                 </details>
             </div>
