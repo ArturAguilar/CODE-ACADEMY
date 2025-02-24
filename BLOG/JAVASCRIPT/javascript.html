@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Code Academy</title>
+    <link rel="shortcut icon" href="../../IMG/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        /* Seção HTML */
+#js-page {
+    width: 100%;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #2c2c2c, #111);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Título */
+h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 12px;
+    color: #ff5e00;
+}
+
+h2 i {
+    font-size: 44px;
+}
+
+/* Parágrafo */
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.container p{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+details .details-content p{
+    color: #ffffff;
+    font-size: 18px;
+    text-align: start;
+    line-height: 0.8;
+}
+
+/* Estilização dos details */
+.js-content details {
+    background: #1e1e1e;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    padding: 18px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.js-content details[open] {
+    background: #363636;
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+.js-content summary {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.js-content summary i {
+    font-size: 26px;
+    color: #ff5e00;
+    transition: all 0.3s ease-in-out;
+}
+
+.js-content details[open] summary i {
+    color: #ffffff;
+}
+
+.js-content .details-content {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #fff;
+    border-left: 2px solid #ff5e00;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 26px; /* Ajuste para telas médias */
+    }
+
+    details .details-content p, p {
+        font-size: 16px; /* Ajuste para telas médias */
+    }
+
+    .container h2{
+        flex-direction: column;
+    }
+
+    details summary{
+        font-size: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navegation">
+            <a href="../../index.html" class="logo"><span>${</span>Code<span>}</span> Academy</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../../index.html" onclick="fecharMenu()">Home</a></li>
+                <li class="nav-item"><a href="../../roadmap.html" onclick="fecharMenu()">Roadmap</a></li>
+                <li class="nav-item"><a href="../../sobre.html" onclick="fecharMenu()">Sobre</a></li>
+                <li class="nav-item"><a href="../../contato.html" onclick="fecharMenu()">Contato</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="js-page">
+        <div class="container">
+            <h2><i class='bx bxl-javascript'></i> JavaScript - A Linguagem da Web</h2>
+            <p>Aprenda os fundamentos do JavaScript para criar interatividade em suas páginas.</p>
+    
+            <div class="js-content">
+                <details>
+                    <summary><i class='bx bx-time-five'></i> História do JavaScript</summary>
+                    <div class="details-content">
+                        <p>JavaScript foi criado em 1995 pela Netscape para tornar as páginas mais dinâmicas.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-code-alt'></i> Sintaxe e Variáveis</summary>
+                    <div class="details-content">
+                        <p>JavaScript utiliza variáveis como <code>let</code>, <code>const</code> e <code>var</code> para armazenar dados.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-function'></i> Funções</summary>
+                    <div class="details-content">
+                        <p>As funções permitem reutilizar código e torná-lo modular.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-intersect'></i> DOM (Document Object Model)</summary>
+                    <div class="details-content">
+                        <p>Com o DOM, podemos manipular elementos HTML dinamicamente.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-refresh'></i> Eventos e Manipulação</summary>
+                    <div class="details-content">
+                        <p>Os eventos permitem capturar interações do usuário, como cliques e digitação.</p>
+                    </div>
+                </details>
+    
+                <details>
+                    <summary><i class='bx bx-bolt'></i> Assíncrono e Promises</summary>
+                    <div class="details-content">
+                        <p>Com <code>async</code> e <code>await</code>, podemos lidar com código assíncrono de forma mais clara.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+    
+        <script>
+        const menu = document.querySelector('.menu');
+        const NavMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            NavMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            document.querySelector(".nav-menu").classList.remove("ativo");
+            document.querySelector(".menu").classList.remove("ativo");
+
+            menu.addEventListener('click' , () => {
+                menu.classList.toggle('desativar');
+                NavMenu.classList.toggle('desativar');
+                });
+}
+    </script>
+</body>
+</html>
