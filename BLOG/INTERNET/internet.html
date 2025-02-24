@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Internet</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Seção HTML */
+#internet-page {
+    width: 100%;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #f7f7f7, #ffffff);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Título */
+h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 12px;
+    color: #0077ff;
+}
+
+h2 i {
+    font-size: 44px;
+}
+
+/* Parágrafo */
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.container p{
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+}
+
+details .details-content p{
+    color: #ffffff;
+    font-size: 18px;
+    text-align: start;
+    line-height: 0.8;
+}
+
+/* Estilização dos details */
+.internet-content details {
+    background: #0004e7;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    padding: 18px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.internet-content details[open] {
+    background: #363636;
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+.internet-content summary {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.internet-content summary i {
+    font-size: 26px;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.internet-content details[open] summary i {
+    color: #ffffff;
+}
+
+.internet-content .details-content {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #fff;
+    border-left: 2px solid #0077ff;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 26px; /* Ajuste para telas médias */
+    }
+
+    details .details-content p, p {
+        font-size: 16px; /* Ajuste para telas médias */
+    }
+
+    .container h2{
+        flex-direction: column;
+    }
+
+    details summary{
+        font-size: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navegation">
+            <a href="../../index.html" class="logo"><span>${</span>Code<span>}</span> Academy</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../../index.html" onclick="fecharMenu()">Home</a></li>
+                <li class="nav-item"><a href="../../roadmap.html" onclick="fecharMenu()">Roadmap</a></li>
+                <li class="nav-item"><a href="../../sobre.html" onclick="fecharMenu()">Sobre</a></li>
+                <li class="nav-item"><a href="../../contato.html" onclick="fecharMenu()">Contato</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="internet-page">
+        <div class="container">
+            <h2><i class='bx bx-globe'></i> A Internet - A Rede Global de Comunicação</h2>
+            <p>Descubra como a Internet funciona e sua importância no mundo digital.</p>
+    
+            <div class="internet-content">   
+                <details>
+                    <summary><i class='bx bx-cloud'></i> Fundamentos</summary>
+                    <div class="details-content">
+                        <p><a href="../INTERNET/01 Como funciona a Internet.html">Como funciona a Internet</a></p>
+                        <p><a href="../INTERNET/02 O que é HTTP.html">O que é HTTP</a></p>
+                        <p><a href="../INTERNET/03 O que é Nome de Domínio.html">O que é Nome de Domínio</a></p>
+                        <p><a href="../INTERNET/04 O que é Hospedagem.html">O que é Hospedagem</a></p>
+                        <p><a href="../INTERNET/05 O que é DNS.html">O que é DNS</a></p>
+                        <p><a href="../INTERNET/06 O que são Navegadores.html">O que são Navegadores</a></p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>    
+    
+        <script>
+        const menu = document.querySelector('.menu');
+        const NavMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            NavMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            document.querySelector(".nav-menu").classList.remove("ativo");
+            document.querySelector(".menu").classList.remove("ativo");
+
+            menu.addEventListener('click' , () => {
+                menu.classList.toggle('desativar');
+                NavMenu.classList.toggle('desativar');
+                });
+}
+    </script>
+</body>
+</html>

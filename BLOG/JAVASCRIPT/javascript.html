@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Code Academy</title>
-    <link rel="shortcut icon" href="../../IMG/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../style.css">
+    <title>Javascript</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Seção HTML */
 #js-page {
     width: 100%;
     padding: 80px 5%;
-    background: linear-gradient(135deg, #2c2c2c, #111);
+    background: linear-gradient(135deg, #f7f7f7, #ffffff);
     color: #fff;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@ h2 {
     text-align: center;
     justify-content: center;
     gap: 12px;
-    color: #ff5e00;
+    color: #ffd900;
 }
 
 h2 i {
@@ -52,6 +52,7 @@ a{
 .container p{
     margin-bottom: 20px;
     text-align: center;
+    color: black;
 }
 
 details .details-content p{
@@ -63,7 +64,7 @@ details .details-content p{
 
 /* Estilização dos details */
 .js-content details {
-    background: #1e1e1e;
+    background: #f0cc00;
     border-radius: 14px;
     margin-bottom: 12px;
     padding: 18px;
@@ -90,7 +91,7 @@ details .details-content p{
 
 .js-content summary i {
     font-size: 26px;
-    color: #ff5e00;
+    color: #ffffff;
     transition: all 0.3s ease-in-out;
 }
 
@@ -103,7 +104,7 @@ details .details-content p{
     margin-top: 10px;
     padding: 10px;
     color: #fff;
-    border-left: 2px solid #ff5e00;
+    border-left: 2px solid #ffd900;
 }
 
 @media (max-width: 768px) {
@@ -150,49 +151,105 @@ details .details-content p{
     
             <div class="js-content">
                 <details>
-                    <summary><i class='bx bx-time-five'></i> História do JavaScript</summary>
+                    <summary><i class='bx bx-code-curly'></i> Fundamentos</summary>
                     <div class="details-content">
-                        <p>JavaScript foi criado em 1995 pela Netscape para tornar as páginas mais dinâmicas.</p>
+                        <p><a href="../JAVASCRIPT/INTRODUÇÂO/01 Introdução.html">Introdução</a></p>
+                        <p><a href="../JAVASCRIPT/INTRODUÇÂO/02 Output.html">Output</a></p>
+                        <p><a href="../JAVASCRIPT/INTRODUÇÂO/03 Declarações.html">Declarações</a></p>
+                        <p><a href="../JAVASCRIPT/INTRODUÇÂO/04 Variáveis.html">Variáveis</a></p>
+                        <p><a href="../JAVASCRIPT/INTRODUÇÂO/05 Operadores.html">Operadores</a></p>
+                        <p><a href="../JAVASCRIPT/INTRODUÇÂO/06 Tipos de Dados.html">Tipos de Dados</a></p>
+                        <p><a href="../JAVASCRIPT/INTRODUÇÂO/07 Conversão de Tipos de Dados.html">Conversão de Tipos de Dados</a></p>
+                        <p><a href="../JAVASCRIPT/INTRODUÇÂO/08 Funções.html">Funções</a></p>
                     </div>
                 </details>
     
                 <details>
-                    <summary><i class='bx bx-code-alt'></i> Sintaxe e Variáveis</summary>
+                    <summary><i class='bx bx-hash'></i> Versões</summary>
                     <div class="details-content">
-                        <p>JavaScript utiliza variáveis como <code>let</code>, <code>const</code> e <code>var</code> para armazenar dados.</p>
+                        <p></p>
                     </div>
                 </details>
     
                 <details>
-                    <summary><i class='bx bx-function'></i> Funções</summary>
+                    <summary><i class='bx bx-data'></i> Objetos</summary>
                     <div class="details-content">
-                        <p>As funções permitem reutilizar código e torná-lo modular.</p>
+                        <p></p>
                     </div>
                 </details>
     
                 <details>
-                    <summary><i class='bx bx-intersect'></i> DOM (Document Object Model)</summary>
+                    <summary><i class='bx bx-cog'></i> Funções</summary>
                     <div class="details-content">
-                        <p>Com o DOM, podemos manipular elementos HTML dinamicamente.</p>
+                        <p></p>
                     </div>
                 </details>
     
                 <details>
-                    <summary><i class='bx bx-refresh'></i> Eventos e Manipulação</summary>
+                    <summary><i class='bx bx-layer'></i> Classes</summary>
                     <div class="details-content">
-                        <p>Os eventos permitem capturar interações do usuário, como cliques e digitação.</p>
+                        <p></p>
                     </div>
                 </details>
     
                 <details>
-                    <summary><i class='bx bx-bolt'></i> Assíncrono e Promises</summary>
+                    <summary><i class='bx bx-time-five'></i> Assíncrono e Promises</summary>
                     <div class="details-content">
-                        <p>Com <code>async</code> e <code>await</code>, podemos lidar com código assíncrono de forma mais clara.</p>
+                        <p></p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><i class='bx bx-network-chart'></i> HTML DOM</summary>
+                    <div class="details-content">
+                        <p></p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><i class='bx bx-window'></i> Browser BOM</summary>
+                    <div class="details-content">
+                        <p></p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><i class='bx bx-plug'></i> Web APIs</summary>
+                    <div class="details-content">
+                        <p></p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><i class='bx bx-transfer'></i> AJAX</summary>
+                    <div class="details-content">
+                        <p></p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><i class='bx bx-file'></i> JSON</summary>
+                    <div class="details-content">
+                        <p></p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><i class='bx bx-link'></i> JS vs jQuery</summary>
+                    <div class="details-content">
+                        <p></p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary><i class='bx bx-bar-chart'></i> Graphics</summary>
+                    <div class="details-content">
+                        <p></p>
                     </div>
                 </details>
             </div>
         </div>
-    </section>
+    </section>    
     
         <script>
         const menu = document.querySelector('.menu');

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Acessibilidade</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Seção HTML */
+#acessibilidade-page {
+    width: 100%;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #f7f7f7, #ffffff);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Título */
+h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 12px;
+    color: #00ff80;
+}
+
+h2 i {
+    font-size: 44px;
+}
+
+/* Parágrafo */
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.container p{
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+}
+
+details .details-content p{
+    color: #ffffff;
+    font-size: 18px;
+    text-align: start;
+    line-height: 0.8;
+}
+
+/* Estilização dos details */
+.acessibilidade-content details {
+    background: #00e673;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    padding: 18px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.acessibilidade-content details[open] {
+    background: #363636;
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+.acessibilidade-content summary {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.acessibilidade-content summary i {
+    font-size: 26px;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.acessibilidade-content details[open] summary i {
+    color: #ffffff;
+}
+
+.acessibilidade-content .details-content {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #fff;
+    border-left: 2px solid #00ff80;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 26px; /* Ajuste para telas médias */
+    }
+
+    details .details-content p, p {
+        font-size: 16px; /* Ajuste para telas médias */
+    }
+
+    .container h2{
+        flex-direction: column;
+    }
+
+    details summary{
+        font-size: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navegation">
+            <a href="../../index.html" class="logo"><span>${</span>Code<span>}</span> Academy</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../../index.html" onclick="fecharMenu()">Home</a></li>
+                <li class="nav-item"><a href="../../roadmap.html" onclick="fecharMenu()">Roadmap</a></li>
+                <li class="nav-item"><a href="../../sobre.html" onclick="fecharMenu()">Sobre</a></li>
+                <li class="nav-item"><a href="../../contato.html" onclick="fecharMenu()">Contato</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="acessibilidade-page">
+        <div class="container">
+            <h2><i class='bx bx-universal-access'></i> Acessibilidade na Web</h2>
+            <p>Garantir que todos possam acessar e interagir com conteúdos online é essencial. Veja como tornar a web mais inclusiva.</p>
+    
+            <div class="acessibilidade-content">   
+                <details>
+                    <summary><i class='bx bx-low-vision'></i> Fundamentos</summary>
+                    <div class="details-content">
+                        <p><a href="../ACESSIBILIDADE/01 Acessibilidade Digital.html">Acessibilidade Digital</a></p>
+                        <p><a href="../ACESSIBILIDADE/02 Medição da Acessibilidade Digital.html">Medição da Acessibilidade Digital</a></p>
+                        <p><a href="../ACESSIBILIDADE/03 ARIA vs HTML.html">ARIA vs HTML</a></p>
+                        <p><a href="../ACESSIBILIDADE/04 Estrutura de Conteúdo.html">Estrutura de Conteúdo</a></p>
+                        <p><a href="../ACESSIBILIDADE/05 Documento.html">Documento</a></p>
+                        <p><a href="../ACESSIBILIDADE/06 Foco no Teclado.html">Foco no Teclado</a></p>
+                        <p><a href="../ACESSIBILIDADE/07 JavaScript.html">JavaScript</a></p>
+                        <p><a href="../ACESSIBILIDADE/08 Imagens.html">Imagens</a></p>
+                        <p><a href="../ACESSIBILIDADE/09 Cor e Contraste.html">Cor e Contraste</a></p>
+                        <p><a href="../ACESSIBILIDADE/10 Animação e Movimento.html">Animação e Movimento</a></p>
+                        <p><a href="../ACESSIBILIDADE/11 Tipografia.html">Tipografia</a></p>
+                        <p><a href="../ACESSIBILIDADE/12 Vídeo e Áudio.html">Vídeo e Áudio</a></p>
+                        <p><a href="../ACESSIBILIDADE/13 Formulários.html">Formulários</a></p>
+                        <p><a href="../ACESSIBILIDADE/14 Padrões, Componentes e Sistemas de Design.html">Padrões, Componentes e Sistemas de Design</a></p>
+                        <p><a href="../ACESSIBILIDADE/15 Design e Experiência do Usuário (UX).html">Design e Experiência do Usuário (UX)</a></p>
+                    </div>
+                </details>
+    
+            </div>
+        </div>
+    </section>       
+    
+        <script>
+        const menu = document.querySelector('.menu');
+        const NavMenu = document.querySelector('.nav-menu');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            NavMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            document.querySelector(".nav-menu").classList.remove("ativo");
+            document.querySelector(".menu").classList.remove("ativo");
+
+            menu.addEventListener('click' , () => {
+                menu.classList.toggle('desativar');
+                NavMenu.classList.toggle('desativar');
+                });
+}
+    </script>
+</body>
+</html>
