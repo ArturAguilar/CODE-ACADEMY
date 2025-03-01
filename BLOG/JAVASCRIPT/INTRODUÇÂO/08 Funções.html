@@ -172,6 +172,137 @@
                 console.log(resultado); // 30                
             </p>
         </div>
+
+        <hr>
+
+        <h2>Funções sem Parâmetros</h2>
+        <p>Se uma função não precisar de parâmetros, basta omitir os valores dentro dos parênteses.</p>
+        <div class="code">
+            <p>
+                function mensagem() {  <br>
+                    return "Olá, mundo!"; <br>
+                  } <br><br>
+                  
+                  console.log(mensagem()); // "Olá, mundo!"                  
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Funções com Parâmetros Padrão</h2>
+        <p>Se nenhum valor for passado para um parâmetro, podemos definir um valor padrão.</p>
+        <div class="code">
+            <p>
+                function saudacao(nome = "visitante") { <br>
+                    return "Olá, " + nome + "!"; <br>
+                  } <br><br>
+                  
+                  console.log(saudacao("Maria")); // "Olá, Maria!" <br>
+                  console.log(saudacao()); // "Olá, visitante!"
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Funções Anônimas</h2>
+        <p>As funções anônimas não possuem nome e são geralmente usadas dentro de variáveis.</p>
+        <div class="code">
+            <p>
+                let somar = function(a, b) { <br>
+                    return a + b; <br>
+                  }; <br><br>
+                  
+                  console.log(somar(5, 10)); // 15
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Arrow Functions</h2>
+        <p>As arrow functions (funções de seta) são uma forma mais curta de escrever funções.</p>
+
+        <h3>Sintaxe</h3>
+        <div class="code">
+            <p>
+                let nomeDaFuncao = (param1, param2) => { <br>
+                    // Código a ser executado <br>
+                    return resultado; <br>
+                  };                  
+            </p>
+        </div> 
+        <p>Se houver apenas uma linha, podemos omitir {} e return.</p><br>
+
+        <h3>Exemplo</h3>
+        <div class="code">
+            <p>
+                // Função tradicional <br>
+                function dobrar(x) { <br>
+                  return x * 2; <br>
+                } <br><br>
+                
+                // Mesma função com arrow function <br>
+                const dobrar = x => x * 2;  <br><br>
+                
+                console.log(dobrar(4)); // 8                
+            </p>
+        </div>
+        <p>Se a função não tiver parâmetros, usamos () vazios:</p>
+        <div class="code">
+            <p>
+                let mensagem = () => "Olá, mundo!"; <br>
+                console.log(mensagem()); // "Olá, mundo!"                
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Diferença entre Função Normal e Arrow Function</h2>
+        <p>Arrow functions não possuem seu próprio this, ou seja, elas herdam o this do contexto onde foram criadas.</p>
+
+        <h3>Exemplo com this</h3>
+        <div class="code">
+            <p>
+                const pessoa = { <br>
+                    nome: "Artur", <br>
+                    idade: 18, <br>
+                    falar: function() {     <br>
+                      console.log(`Meu nome é ${this.nome}`); <br>
+                    } <br>
+                  }; <br><br>
+                  
+                  pessoa.falar(); // "Meu nome é Artur"                  
+            </p>
+        </div>
+        <p>Se usarmos uma arrow function dentro do objeto, this não se referirá ao objeto.</p>
+        <div class="code">
+            <p>
+                const pessoa = { <br>
+                    nome: "Artur", <br>
+                    idade: 18, <br>
+                    falar: () => {     <br>
+                      console.log(`Meu nome é ${this.nome}`); <br>
+                    } <br>
+                  }; <br><br>
+                  
+                  pessoa.falar(); // "Meu nome é undefined"
+            </p>
+        </div>
+        <p>⚠️ Use funções tradicionais dentro de objetos para evitar problemas com this.</p>
+        
+        <hr>
+
+        <h2>Função como Parâmetro (Callback)</h2>
+        <p>Funções podem ser passadas como argumento para outras funções.</p>
+        <div class="code">
+            <p>
+                function processar(numero, funcao) {    <br>
+                    return funcao(numero); <br>
+                  } <br><br>
+                  
+                  console.log(processar(5, dobrar)); // 10 <br>
+                  console.log(processar(4, x => x ** 2)); // 16                  
+            </p>
+        </div>
     </div>
 </body>
 </html>
