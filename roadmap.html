@@ -40,11 +40,10 @@ p {
 
 /* Grid de Roadmaps */
 .roadmap-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Aumentando o espaçamento entre os cards */
+    justify-items: center;
 }
 
 /* Cartões de Roadmap */
