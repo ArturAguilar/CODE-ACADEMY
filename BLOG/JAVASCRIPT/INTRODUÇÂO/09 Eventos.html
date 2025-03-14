@@ -147,7 +147,48 @@
 
         <hr>
 
-        
+        <h2>Como Lidar com Eventos</h2>  
+        <p>Existem três formas principais de atribuir eventos a elementos no JavaScript:</p>
+
+        <h3>Atributo HTML (não recomendado)</h3>
+        <p>Podemos adicionar um evento diretamente no HTML, mas isso não é recomendado porque mistura HTML com JavaScript.</p>
+        <div class="code">
+            <p>&lt;button onclick="alert('Botão clicado!')"&gt;Clique aqui&lt;/button&gt;</p>
+        </div> <br>
+
+        <h3>Manipulador de Eventos no JavaScript (Forma Recomendada)</h3>
+        <p>A melhor prática é usar o addEventListener(), pois permite maior controle sobre os eventos.</p>
+        <div class="code">
+            <p>
+                &lt;button id="meuBotao"&gt;Clique aqui&lt;/button&gt; <br><br>
+
+                &lt;script&gt; <br>
+                document.getElementById("meuBotao").addEventListener("click", function() { <br>
+                  alert("Botão clicado!"); <br>
+                }); <br>
+                &lt;/script&gt;                
+            </p>
+        </div>
+        <p>
+            Aqui estamos: <br>
+            ✅ Pegando o botão pelo id. <br>
+            ✅ Adicionando um evento de clique. <br>
+            ✅ Executando a função quando o botão for clicado.
+        </p> <br>
+
+        <h3>Propriedade onevent (Alternativa)</h3>
+        <p>Também podemos definir eventos diretamente no JavaScript com onevent.</p>
+        <div class="code">
+            <p>
+                &lt;button id="meuBotao"&gt;Clique aqui&lt;/button&gt; <br><br>
+
+                &lt;script&gt; <br>
+                document.getElementById("meuBotao").onclick = function() { <br>
+                  alert("Botão clicado!"); <br>
+                }; <br>
+                &lt;/script&gt;                
+            </p>
+        </div>
     </div>
 </body>
 </html>
