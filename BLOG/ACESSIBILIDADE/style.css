@@ -1,117 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            list-style: none;
-            text-decoration: none;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body{
-            background-color: white;
-        }
+body {
+    background-color: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+}
 
-        .navegation{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 18px 40px;
-            background-color: rgb(255, 255, 255);
-            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
-            transition: all 0.5s;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-        }
+.conteiner {
+    width: 90%;
+    max-width: 850px;
+    margin: 25px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        .navegation .logo{
-            color: rgb(0, 0, 0);
-            font-size: 1.7rem;
-            font-weight: 500;
-        }
+.conteiner > h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
 
-        .logo span{
-            color: #33ff00;
-            font-weight: 500;
-        }
+h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
 
-        .navegation ul{
-            display: flex;
-            align-items: center;
-            gap: 5rem;
-        }
+p, li {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
 
-        .navegation ul li a{
-            color: rgb(0, 0, 0);
-            font-size: 17px;
-            font-weight: 500;
-        }
+ul {
+    list-style: inside;
+    margin-bottom: 25px;
+}
 
-        .navegation ul li a:hover{
-            border-bottom: 2px solid #00ff15;
-            margin-bottom: 5px;
-        }
+.code p {
+    background-color: #e6e4e4;
+    border-radius: 10px;
+    font-family: 'Fira Code', monospace;
+    padding: 10px;
+    overflow-x: auto;
+    font-size: 13px;
+}
 
-       .menu{
-            cursor: pointer;
-            display: none;
-        }
+nav {
+    text-align: start;
+    padding-top: 5px;
+    margin: 20px 0;
+}
 
-        .menu .bar{
-            display: block;
-            width: 28px;
-            height: 3px;
-            border-radius: 3px;
-            background: #00ff15;
-            margin: 5px auto ;
-            transition: all 0.3s;
-        }
+nav > a {
+    text-decoration: none;
+    color: rgb(2, 243, 62);
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 14px;
+}
 
-       .menu .bar:nth-child(1), .menu .bar:nth-child(3){
-            background-color:#00ff15;
-        } 
-        
-        @media (max-width : 900px){
-            .navegation{
-                padding: 18px 20px;
-            }
+nav > a:hover {
+    color: #ffffff;
+    background-color: rgb(8, 241, 67);
+}
 
-            .menu{
-                display: block;
-                cursor: pointer;
-            }
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
 
-            .menu.ativo .bar:nth-child(1){
-                transform: translateY(8px) rotate(45deg);
-            }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 13px;
+}
 
-            .menu.ativo .bar:nth-child(2){
-                opacity: 0;
-            }
+th {
+    background-color: #757575;
+    color: white;
+}
 
-            .menu.ativo .bar:nth-child(3){
-                transform: translateY(-8px) rotate(-45deg);
-            }
+@media (min-width: 768px) {
+    .conteiner > h1 {
+        font-size: 32px;
+    }
 
-            .nav-menu{
-                position: fixed;
-                right: -100%;
-                top: 75px;
-                width: 100%;
-                height: 100%;
-                flex-direction: column;
-                background-color: rgb(255, 255, 255);
-                gap: -10px;
-                transition: 0.3s;
-            }
+    h2 {
+        font-size: 26px;
+    }
 
-            .nav-menu.ativo{
-                right: 0;
-            }
+    p, li {
+        font-size: 16px;
+    }
 
-            .nav-item{
-                margin: -4px 0;
-            }
-        }
+    .code p {
+        font-size: 15px;
+    }
+
+    nav > a {
+        font-size: 16px;
+    }
+
+    table {
+        font-size: 15px;
+    }
+}

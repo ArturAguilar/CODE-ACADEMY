@@ -1,0 +1,130 @@
+/* Estilização geral */
+.main-content {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.hero h1 span {
+    color: #00ff00;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #00ff00;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+}
+
+.btn:hover {
+    background: #00cc00;
+    transform: translateY(-2px);
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    max-width: 300px;
+    padding: 25px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    transition: 0.3s;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    background: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+.feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Sections conectadas */
+.content-section {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 40px;
+    border-radius: 12px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    color: #222;
+}
+
+.content-section i {
+    color: #00ff00;
+    margin-right: 8px;
+}
+
+.content-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #000, #1a1a1a);
+    z-index: -1;
+    top: 0;
+    left: 0;
+} 
